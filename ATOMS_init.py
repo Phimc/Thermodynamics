@@ -4,10 +4,12 @@ import Constantnums as C
 import math 
 import Maxwell
 
-v_mean = (8*C.R*C.T/C.Pi/C.M)**(1/2)
+#v_mean = (8*C.R*C.T/C.Pi/C.M)**(1/2)
+
 def randangle():
     angle = [math.cos(rd.rand()*C.Pi),math.cos(rd.rand()*C.Pi),math.cos(rd.rand()*C.Pi)]
     return angle
+
 def ATOMS_INIT(ATOMS,n_gas):
     i = 0
     for x in range(10):

@@ -9,7 +9,7 @@ def maxwell():
     for i in range(20000):
         P_vi = 4*C.Pi*(C.M/(2*C.Pi*C.R*C.T))**(3/2)*math.exp(-C.M*(dv*i)**2/(2*C.R*C.T))*(dv*i)**2*dv
         P_others += P_vi
-        v_distribute[P_vi]=i*dv
+        v_distribute[P_others]=i*dv
     return 0
 maxwell()
 def randspeed():
