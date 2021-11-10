@@ -2,6 +2,8 @@
 from numpy import random as rd
 import Constantnums as C
 import math 
+import Maxwell
+
 v_mean = (8*C.R*C.T/C.Pi/C.M)**(1/2)
 def randangle():
     angle = [math.cos(rd.rand()*C.Pi),math.cos(rd.rand()*C.Pi),math.cos(rd.rand()*C.Pi)]
@@ -15,7 +17,7 @@ def ATOMS_INIT(ATOMS,n_gas):
                 ATOMS[i].r[1] = y*C.l/n_gas**(1/3)
                 ATOMS[i].r[2] = z*C.l/n_gas**(1/3)
                 
-                v = randspeed()
+                v = Maxwell.randspeed()
                 v_angle = randangle()
                 ATOMS[i].rv[0] = v_angle[0]*v
                 ATOMS[i].rv[1] = v_angle[1]*v
@@ -24,7 +26,3 @@ def ATOMS_INIT(ATOMS,n_gas):
                 i += 1
                 if i > n_gas:
                     return 0
-#"""分配初始速度"""
-def randspeed():
-    v = v_mean*rd.rand()*2
-    return v
