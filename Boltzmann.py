@@ -1,8 +1,8 @@
 import random
 from matplotlib import pyplot as plt
 
-N = 1000 #人数
-M = 90000 #猜拳次数
+N = 100 #人数
+M = 1000 #猜拳次数
 score_board = {} #计分
 for i in range(N):
     score_board[i] = 0
